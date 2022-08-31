@@ -1,1 +1,27 @@
 // Заголовки, общие БЄМ блоки и проче...
+.address, .telephone{
+    font-weight: 500;
+    display: flex;
+    @include adaptiveValue("font-size", 24, 20, 1600, 939.99, 1);
+}
+.telephone, .address {
+	// .telephone__icon
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    @media (max-width: $mobile){
+        display: none;
+    }
+    &__info{
+        white-space: nowrap;
+    }
+	&__icon {
+        transition: 0.3s ease all;
+        user-select: none;
+        max-width: 100%;
+        height: auto;
+        &:hover{
+            transform: scale(1.1);
+        }
+	}
+}

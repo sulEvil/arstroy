@@ -1,9 +1,124 @@
 //====================================================================================================
+.header {
+	
+	// .header__container
+	@include adaptiveValue("padding-top", 50, 16, 1600, 320, 1);
+	@include adaptiveValue("padding-bottom", 50, 16, 1600, 320, 1);
+	&__container {
+		display: flex;
+		gap: 24px;
+		
+		@media (max-width:$mobile){
+			align-items: center;
+		}
+	}
+	// .header__logo
+	&__logo {
+		align-self: flex-end;
+		flex: 1 1 auto;
+	}
+	// .header__content
+	&__content {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue("gap", 50, 20, 1600, 939.99, 1);
+		
+	}
+	// .header__contacts
+	&__contacts {
+		display: flex;
+		@include adaptiveValue("gap", 106, 20, 1920, 939.99, 1);
+
+	}
+	// .header__menu
+	&__menu {
+
+	}
+}
+
+.menu {
+	// .menu__icon
+	&__icon {
+	}
+	// .menu__body
+	&__telephone{
+		display: none;
+		overflow-y: auto;
+		@media (max-width: $mobile) {
+			display: block;
+			top: 120px;
+			position: absolute;
+			transition: all 0.3s ease;
+			left: -100%;
+			bottom: 0;
+			.menu-open &{
+				left: 0;
+				right: 0;
+				display: block;
+				padding-left: 30px;
+			}
+		}
+	}
+	&__body {
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+	// .menu__list
+	&__list {
+		display: flex;
+		font-weight: 500;
+		justify-content: space-between;
+		@include adaptiveValue("font-size", 24, 20, 1600, 939.99, 1);
+		@include adaptiveValue("gap", 24, 16);
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			@include adaptiveValue("gap", 50, 40, 939.99, 320, 1);
+			font-size: 24px;
+			line-height: 117%;
+		}
+			
+			
+	}
+	&__feedback{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 36px;
+		margin-top: 42px;
+		margin-bottom: 36px;
+	}
+	// .menu__item
+	&__item {
+		position: relative;
+		@media (max-width: $mobile) {
+			align-self: flex-start;
+		}
+		&:before{
+			content: '';
+			position: absolute;
+			display: block;
+			background-color: #27303E;
+			left: 0;
+			right: 100%;
+			top: 105%;
+			height: 2px;
+			transition: 0.3s ease all;
+		}
+		&:hover::before{
+			right: 0;
+		}
+	}
+	// .menu__link
+	&__link {
+	}
+}
+
 
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
@@ -22,7 +137,7 @@
 			position: absolute;
 			width: 100%;
 			height: rem(2);
-			background-color: #000;
+			background-color: #27303E;
 		}
 		&::before {
 			top: 0;
@@ -51,4 +166,4 @@
 		}
 	}
 }
-*/
+
