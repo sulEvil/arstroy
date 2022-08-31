@@ -1,6 +1,6 @@
 //====================================================================================================
 .header {
-	
+	background: #fafafa;
 	// .header__container
 	@include adaptiveValue("padding-top", 50, 16, 1600, 320, 1);
 	@include adaptiveValue("padding-bottom", 50, 16, 1600, 320, 1);
@@ -43,7 +43,7 @@
 	// .menu__body
 	&__telephone{
 		display: none;
-		background-color: white;
+		background-color: #fafafa;
 		z-index: 100;
 		overflow-y: auto;
 		@media (max-width: $mobile) {

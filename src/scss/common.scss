@@ -37,10 +37,25 @@
     margin: 0 auto;
     display: block;
     transition: 0.3s ease all;
+    @include adaptiveValue("font-size", 24, 18, 1200, 320, 1);
+    @media (max-width:$mobile){
+         font-weight: 400; 
+    }
     &:hover{
         background: #4469B4;
     }
     &:disabled{
         background: #7D818E;
+    }
+    &_op {
+        background: #FFFFFF;
+        border: 1px solid #173777;
+        font-weight: 400;
+        color: #27303E;
+        &:hover{
+            background: #FFFFFF;
+            border: 1px solid #4469B4;
+
+        }
     }
 }

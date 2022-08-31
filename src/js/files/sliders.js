@@ -27,7 +27,7 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на стронице
-	if (document.querySelector('.promo__slider')) { // Указываем скласс нужного слайдера
+	if (document.querySelector('.partners__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
 		new Swiper('.promo__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
@@ -68,6 +68,66 @@ function initSliders() {
 				},
 				1920: {
 					slidesPerView: 2,
+					spaceBetween: 24,
+				},
+			},
+			
+			// События
+			on: {
+
+			}
+		});
+	}
+	if (document.querySelector('.partners__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.partners__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Autoplay],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			autoHeight: false,
+			speed: 800,
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			
+			// Эффеты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			
+
+
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				
+				},
+				600: {
+					slidesPerView: 2,
+					spaceBetween: 24,
+				
+				},
+				819.99: {
+					slidesPerView: 2,
+					spaceBetween: 24,
+					
+				},
+				919.9: {
+					slidesPerView: 3,
+					spaceBetween: 24,
+				},
+				1920: {
+					slidesPerView: 3,
 					spaceBetween: 24,
 				},
 			},
