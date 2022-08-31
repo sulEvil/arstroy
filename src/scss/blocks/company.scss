@@ -1,0 +1,16 @@
+.company{
+    text-align: center;
+    margin-bottom: rem(80);
+    &__title{
+        font-family: 'EB Garamond';
+        @include adaptiveValue("font-size", 56, 32, 1600, 320, 1);
+        @include adaptiveValue("margin-bottom", 24, 40, 819.99, 320, 1);
+        line-height: 114%;
+    }
+    &__description{
+        line-height: 150%;
+        display: block;
+        max-width: rem(615);
+        margin: 0 auto;
+    }
+}

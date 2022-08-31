@@ -131,6 +131,11 @@ body {
 @import "header";
 @import "footer";
 @import "blocks/promo";
+@import "blocks/advantage";
+@import "blocks/company";
+@import "blocks/benefit";
+@import "blocks/typesOfFacades";
+
 
 // Подключение стилей отдельных страниц
 @import "home";

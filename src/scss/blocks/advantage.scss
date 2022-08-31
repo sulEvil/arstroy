@@ -1,0 +1,37 @@
+.advantage{
+    margin-bottom: rem(100);
+    &__container{
+        display: flex;
+        column-gap: 24px;
+        row-gap: 40px;
+        justify-content: space-between;
+        @media (max-width:$mobile){
+             flex-direction: column; 
+        }
+    }
+    &__icon{
+        text-align: center;
+        @include adaptiveValue("margin-bottom", 50, 30, 1600, 320, 1);
+        img{
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        @media (max-width:$mobile){
+            align-items: center;
+       }
+    }
+    &__text{
+        @include adaptiveValue("font-size", 24, 18, 1600, 320, 1);
+        @media (max-width:$mobile){
+            max-width: 500px;
+       }
+    }
+
+}
