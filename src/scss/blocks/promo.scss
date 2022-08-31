@@ -1,0 +1,40 @@
+.promo{
+    margin-bottom: rem(105);
+    &__slider{
+        @include adaptiveValue("margin-bottom", 50, 30, 1600, 320, 1);
+    }
+    &__title{
+        text-align: center;
+        font-weight: 400;
+        font-family: 'EB Garamond';
+        @include adaptiveValue("font-size", 56, 32, 1600, 320, 1);
+        line-height: 114%;
+        margin-bottom: 50px;
+        @include adaptiveValue("margin-bottom", 50, 30, 1600, 320, 1);
+    }
+    &__image{
+        text-align: center;
+        img{
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        @include adaptiveValue("margin-bottom", 50, 30, 1600, 320, 1);
+    }
+    &__desc{
+        font-weight: 500;
+        line-height: 150%;
+        text-align: center;
+        @include adaptiveValue("font-size", 24, 19, 819.99, 320, 1);
+    }
+    &__subtitle{
+        max-width: rem(712);
+        margin: 0 auto;
+        font-size: 18px;
+        line-height: 140%;
+        text-align: center;
+    }
+    &__button{
+        @include adaptiveValue("margin-top", 70, 40, 1600, 320, 1);
+    }
+}

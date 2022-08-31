@@ -43,11 +43,14 @@
 	// .menu__body
 	&__telephone{
 		display: none;
+		background-color: white;
+		z-index: 100;
 		overflow-y: auto;
 		@media (max-width: $mobile) {
 			display: block;
 			top: 120px;
 			position: absolute;
+			
 			transition: all 0.3s ease;
 			left: -100%;
 			bottom: 0;
