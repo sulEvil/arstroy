@@ -1,0 +1,104 @@
+.cooperation {
+    // .cooperation__container
+    &__container {
+    }
+    // .cooperation__title
+    &__title {
+        text-align: center;
+        @include adaptiveValue("font-size", 56, 32, 1200, 320, 1);
+        line-height: 114%;
+        font-family: 'EB Garamond';
+        @include adaptiveValue("margin-bottom", 80, 33, 1600, 320, 1);
+    }
+    // .cooperation__progress
+    &__progress {
+        display: flex;
+        flex-direction: column;
+        gap: rem(100);
+        align-items: center;
+        justify-content: center;
+    }
+    // .cooperation__point
+    &__point {
+    }
+}
+.point {
+    display: flex;
+    gap: rem(22);
+    flex-basis: 50%;
+    flex: 1 1 auto;
+
+    /* Скроем элемент в начальном состоянии */
+    opacity: 0;
+    transform: translateY(20px);
+    position:relative;
+
+      &.element-show{
+        opacity: 1;
+        transition: all 1.5s;
+        transform: translateY(0%);
+      }
+
+
+    &__number {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        line-height: 150%;
+        color: #FAFAFA;
+        background: #7D818E;
+        height: rem(52);
+        width: rem(52);
+        border-radius: 50%;
+        z-index: 2;
+    }
+    &:not(:first-child) &__number:before{
+        content: '';
+        display: block;
+        background: #7D818E;
+        width: 1px;
+        position: absolute;
+        left: 50%;
+        top: -120px;
+        bottom: 100%;
+        z-index: -1;
+    }
+    // .point__number
+   
+    // .point__content
+    &__content {
+        flex: 1 1 auto;
+        width: 521px;
+    }
+    // .point__main
+    &__main {
+        @include adaptiveValue("font-size", 24, 20, 1600, 320, 1);
+        margin-bottom: rem(6);
+    
+    }
+    // .point__desc
+    &__desc {
+        font-weight: 400;
+        @include adaptiveValue("font-size", 18, 16, 1600, 320, 1);
+    }
+    &_r {
+        margin-left: auto;
+    }
+    &_l{
+        flex-direction: row-reverse;
+        margin-right: auto;
+        text-align: end;
+    }
+}
+
+.element-animation {
+    
+  }
+  .element-animation
+  
+  
+  .element-animation.element-show {
+    
+  }
