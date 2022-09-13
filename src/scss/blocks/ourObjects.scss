@@ -1,0 +1,59 @@
+.ourObjects {
+    position: relative;
+    // .ourObjects__title
+    &__title {
+        text-align: center;
+        font-family: 'EB Garamond';
+        font-style: normal;
+        font-weight: 400;
+        @include adaptiveValue("font-size", 56, 32, 1200, 320, 1);
+        line-height: 114%;
+        @include adaptiveValue("margin-bottom", 50, 30, 1200, 320, 1);
+   
+    }
+    // .ourObjects__slider
+    &__slider {
+        position: relative;
+    }
+    // .ourObjects__wrapper
+    &__wrapper {
+    }
+    // .ourObjects__slide
+    &__slide {
+        @include adaptiveValue("margin-bottom", 80, 50);
+    }
+    &__image{
+        text-align: center;
+            @include adaptiveValue("margin-bottom", 50, 40);
+            img{
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+    }
+    &__describe{
+        line-height: 150%;
+        @include adaptiveValue("font-size", 24, 18);
+        text-align: center;
+    }
+    &__button-prev{
+        bottom: 0;
+    }
+    &__button-next{
+        bottom: 0;
+    }
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-pagination {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+.swiper-scrollbar {
+}
