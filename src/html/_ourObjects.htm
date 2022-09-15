@@ -7,8 +7,7 @@
         <!-- Двигающееся часть слайдера -->
         <div class="ourObjects__wrapper swiper-wrapper">
             <!-- Слайд -->
-            <div class="ourObjects__slide swiper-slide">
-                
+            <div class="ourObjects__slide swiper-slide">  
                 <div class="ourObjects__image">
                     <img src="@img/blocks/ourObjects/1.png" alt="">
                 </div>
@@ -17,7 +16,6 @@
                 </div>
             </div>
             <div class="ourObjects__slide swiper-slide">
-                
                 <div class="ourObjects__image">
                     <img src="@img/blocks/ourObjects/2.jpg" alt="">
                 </div>
@@ -25,8 +23,7 @@
                     Коттедж в Булгаково 2021г.
                 </div>
             </div>
-            <div class="ourObjects__slide swiper-slide">
-                
+            <div class="ourObjects__slide swiper-slide">       
                 <div class="ourObjects__image">
                     <img src="@img/blocks/ourObjects/3.jpg" alt="">
                 </div>
@@ -36,15 +33,15 @@
             </div>
         </div>
         <!-- Если нужна пагинация -->
-        <div class="swiper-pagination"></div>
-        <!-- Если нужна навигация (влево/вправо) -->
-        <button type="button" class="swiper-button-prev ourObjects__button-prev">
-
+        <div class="ourObjects__pagination swiper-pagination">
+           
         </div>
-        <button type="button" class="swiper-button-next ourObjects__button-next">
-
-        </button>
-        <!-- Если нужен скролбар -->
-        <div class="swiper-scrollbar"></div>
+        <!-- Если нужна навигация (влево/вправо) -->
+        <div type="button" class="swiper-button-prev ourObjects__button-prev ourObjects__left">
+            <img src="@img/icons/arrow.png" alt="">
+        </div>
+        <div type="button" class="swiper-button-next ourObjects__button-next ourObjects__right">
+            <img src="@img/icons/arrow.png" alt="">
+        </div>
     </div>
-</section>
+</section> 

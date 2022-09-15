@@ -1,5 +1,7 @@
 .ourObjects {
     position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
     // .ourObjects__title
     &__title {
         text-align: center;
@@ -8,7 +10,7 @@
         font-weight: 400;
         @include adaptiveValue("font-size", 56, 32, 1200, 320, 1);
         line-height: 114%;
-        @include adaptiveValue("margin-bottom", 50, 30, 1200, 320, 1);
+        @include adaptiveValue("margin-bottom", 40, 20, 1200, 320, 1);
    
     }
     // .ourObjects__slider
@@ -21,9 +23,15 @@
     // .ourObjects__slide
     &__slide {
         @include adaptiveValue("margin-bottom", 80, 50);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        user-select: none;
+        
     }
     &__image{
         text-align: center;
+        max-width: 700px;
             @include adaptiveValue("margin-bottom", 50, 40);
             img{
                 max-width: 100%;
@@ -42,18 +50,32 @@
     &__button-next{
         bottom: 0;
     }
-}
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-.swiper-pagination {
-}
-.swiper-button-prev {
-}
-.swiper-button-next {
-}
-.swiper-scrollbar {
+
+    &__pagination{
+        font-size: 18px;
+        bottom: 12px!important;
+    }
+    &__left{
+        bottom: 0px;
+        left: 40%!important;
+        top: initial!important;
+        transform: rotate(-180deg);
+        &::after{
+            content: ''!important;
+        }
+        @media(max-width: 820px){
+            left: 30%!important;
+        }
+    }
+    &__right{
+        bottom: 0px;
+        right: 40%!important;
+        top: initial!important;
+        &::after{
+            content: ''!important;
+        }
+        @media(max-width: 820px){
+            right: 30%!important;
+        }
+    }
 }

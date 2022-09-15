@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Autoplay } from 'swiper';
+import Swiper, { Navigation, Autoplay, Pagination } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -143,25 +143,31 @@ function initSliders() {
 		new Swiper('.ourObjects__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Autoplay],
+			modules: [Navigation, Autoplay, Pagination],
 			observer: true,
 			observeParents: true,
-			spaceBetween: 0,
+
 			autoHeight: false,
 			speed: 800,
+			centeredSlides: true,
 			//touchRatio: 0,
 			//simulateTouch: false,
 			loop: true,
+			slidesPerView: 2,
+			spaceBetween: 67,
 			preloadImages: true,
-			slidesPerView: "auto",
 			centeredSlides: true,
 			//lazy: true,
 			// Эффеты
 			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
+			// autoplay: {
+			// 	delay: 3000,
+			// 	disableOnInteraction: false,
+			// },
+			pagination: {
+				el: ".ourObjects__pagination",
+				type: "fraction",
+			  },
 			navigation: {
 				nextEl: ".ourObjects__button-next",
 				prevEl: ".ourObjects__button-prev",
@@ -169,22 +175,19 @@ function initSliders() {
 
 
 			breakpoints: {
-				320: {
+				320: {		
+					spaceBetween: 24,	
 					slidesPerView: 1,
-					spaceBetween: 24,
-				
 				},
-				819:{
-					slidesPerView: 1,
-					spaceBetween: 67,
-					slidesPerView: "auto",
-					centeredSlides: true,
+				640:{
+
+					slidesPerView: 2,
 				},
-				1920: {
-					slidesPerView: 1,
-					spaceBetween: 67,
-					slidesPerView: "auto",
-					centeredSlides: true,
+				1200:{
+					slidesPerView: 2,
+				},
+				1920: {			
+
 				},
 			},
 			
