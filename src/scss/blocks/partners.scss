@@ -9,6 +9,7 @@
         font-family: 'EB Garamond';
         font-style: normal;
         font-weight: 400;
+        user-select: none;
         @include adaptiveValue("font-size", 56, 32, 1200, 320, 1);
         line-height: 114%;
         @include adaptiveValue("margin-bottom", 50, 30, 1200, 320, 1);
@@ -28,6 +29,7 @@
     &__item {
         text-align: center;
         flex-basis: 33%;
+        user-select: none;
         @media (max-width:$mobileSmall){
             display: flex;
             gap: rem(20);
@@ -72,6 +74,7 @@
         line-height: 140%;
         text-align: center;
         text-overflow: ellipsis;
+        user-select: none;
     }
 }
 .swiper {

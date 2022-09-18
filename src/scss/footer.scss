@@ -1,3 +1,38 @@
 //====================================================================================================
+.footer {
+   background: #FAFAFA;
+   
+   // .footer__container
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #7D818E;
+      padding-top: 20px;
+      padding-bottom: 45px;
+   }
+   // .footer__part
+   &__part {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-self: flex-end;
+   }
+   // .footer__item
+   &__item {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+   }
+
+   &__icon-link{
+      display: block;
+      transition: 0.3s ease all;
+      &:hover{
+         transform: scale(1.05);
+      }
+   }
+
+
+}
 
 //====================================================================================================

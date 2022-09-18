@@ -18,6 +18,9 @@
         gap: rem(100);
         align-items: center;
         justify-content: center;
+        @media (max-width: 639.99px){
+            align-items: flex-start;   
+        }
     }
     // .cooperation__point
     &__point {
@@ -28,19 +31,18 @@
     gap: rem(22);
     flex-basis: 50%;
     flex: 1 1 auto;
-
     /* Скроем элемент в начальном состоянии */
     opacity: 0;
     transform: translateY(20px);
     position:relative;
-
+    @media (max-width: 1199.99px){
+          flex-basis: 100%;
+    }
       &.element-show{
         opacity: 1;
         transition: all 1.5s;
         transform: translateY(0%);
       }
-
-
     &__number {
         position: relative;
         display: flex;
@@ -54,6 +56,9 @@
         width: rem(52);
         border-radius: 50%;
         z-index: 2;
+        @media (max-width: 639.99px){
+            flex-shrink: 0;
+        }
     }
     &:not(:first-child) &__number:before{
         content: '';
@@ -62,16 +67,23 @@
         width: 1px;
         position: absolute;
         left: 50%;
-        top: -120px;
+        top: -118px;
         bottom: 100%;
         z-index: -1;
+        @media (max-width: 639.99px){
+            display: none;
+        }
     }
+   
     // .point__number
    
     // .point__content
     &__content {
         flex: 1 1 auto;
         width: 521px;
+        @media (max-width: 639.99px){
+            width: 100%;    
+        }
     }
     // .point__main
     &__main {
@@ -86,11 +98,19 @@
     }
     &_r {
         margin-left: auto;
+        @media (max-width: 1199.99px){
+            margin-left: initial;
+      }
     }
     &_l{
         flex-direction: row-reverse;
         margin-right: auto;
         text-align: end;
+        @media (max-width: 1199.99px){
+            margin-right: initial;
+            text-align: start;
+            flex-direction: row;
+      }
     }
 }
 

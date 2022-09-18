@@ -27,19 +27,16 @@
 }
 .button{
     font-weight: 700;
-    font-size: rem(18);
     line-height: 150%;
     text-transform: uppercase;
     color: #FAFAFA;
     padding: 11px 27.5px;
+    @include adaptiveValue("min-width", 245, 120);
     background: #173777;
     margin: 0 auto;
     display: block;
     transition: 0.3s ease all;
-    @include adaptiveValue("font-size", 24, 18, 1200, 320, 1);
-    @media (max-width:$mobile){
-         font-weight: 400; 
-    }
+    font-size: rem(18);
     &:hover{
         background: #4469B4;
     }

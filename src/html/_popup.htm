@@ -1,10 +1,36 @@
 <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
-			</div>
+			
+			<form action="" class="order__form popup__form">
+				<div class="popup__header">
+					<button data-close type="button" class="popup__close">Закрыть</button>
+					<div class="popup__text">
+						Text
+					</div>
+				</div>
+            <h3 class="order__title">
+                Заказать отделку фасада
+            </h3>
+            <div class="order__subtitle">
+                Подберём наиболее подходящие стройматериалы и проконсультируем по всем видам работ
+            </div>
+            <label for="" class="order__label">
+                <p class="order__input-name">
+                    Ваше имя*
+                </p>
+                <input type="text" class="order__input" placeholder="Введите имя">
+            </label>
+            <label for="" class="order__label">
+                <p class="order__input-name">
+                    Ваш телефон*
+                </p>
+                <input type="tel" class="order__input" id="number" placeholder="+7 (___) ___-__-__">
+            </label>
+            <button class="order__button button" type="submit">Отправить</button>
+            <p class="order__desc">Отправляя заявку, вы даёте <a target="_blank" href="https://id2.action-media.ru/l/soglasie_na_obrabotku?id=12&site=https%3A//arstroy-ufa.ru/"> согласие на обработку своих персональных данных</a> в соответствии с политикой конфиденциальности</p>
+       </form>
+
 		</div>
 	</div>
 </div> 
